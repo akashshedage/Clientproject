@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --btn-txt-color: white;
+    --btn-bg-color: rgb(11, 88, 160);
+      text-align: center;
+  }
+  body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #252222;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 195);
+  }
+  body.blue-theme {
+    --text-color: rgb(243, 223, 8);
+    --bkg-color: #63b9cf;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 195);
+  }
+  body.yellow-theme {
+    --text-color: rgb(25, 16, 107);
+    --bkg-color: #e9eb73;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 195);
+  }
+  body.pink-theme {
+    --text-color: rgb(25, 150, 11);
+    --bkg-color: #f16d6d;
+    --btn-txt-color: rgb(46, 43, 43);
+    --btn-bg-color: rgb(20, 211, 195);
+  }
+  
+  body {
+    background: var(--bkg-color);
+  }
+  
+  h1,
+  p {
+    color: var(--text-color);
+  }
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 500px;
+    color: var(--btn-txt-color);
+    background-color: var(--btn-bg-color);
+    margin-right: 50px;
+    
+  }
+  
