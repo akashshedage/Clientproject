@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="col-md-4">  
+        <select class="form-control" #event (change)="getProductValue(event) ">
+            <option value="Default">Select Product</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Mobile">Mobile</option>
+            <option value="TV">TV</option>
+        </select>
+    </div>
+
+    <div class="col-md-12" [ngSwitch]="selectProduct" [ngStyle]="colorValue">
+        <h2 class="text-success" *ngSwitchDefault>Please Select Product</h2>
+        <h2 class="text-success" *ngSwitchCase=" 'Laptop' ">Laptop</h2>
+        <h2 class="text-success" *ngSwitchCase=" 'Mobile' ">Mobile</h2>
+        <h2 class="text-success" *ngSwitchCase=" 'TV' ">TV</h2>
+    </div>
+</div>
+
+
+<div *ngFor="let element of arr">
+    <h2>{{element}}</h2>
+</div>
+
+
+
+<Button (click)="onClick()">ngIF</Button>
+<div *ngIf="istrue then temp  else template">
+    <!-- <h1>Welcome to world of class</h1> -->
+</div>
+
+<ng-template #template>Please Click for Result</ng-template>
+<ng-template #temp>Click me if you want to Ignore me</ng-template>
+
+<br><br><br>
+
+<div [ngStyle]="colorValue">
+    Hello, Good Afternoon
+</div>
+
+<br><br><br>
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
+    }">
+        {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
+
